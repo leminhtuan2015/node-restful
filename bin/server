@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+var app = require('../app');
+var port = process.env.PORT || 8080;
+app.get("/", function(request, response){
+  response.json({ message: "Welcome to the coolest API on earth!"});
+});
+app.listen(port);
+console.log('Magic happens at http://localhost:' + port);
